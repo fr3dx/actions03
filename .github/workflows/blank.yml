@@ -1,4 +1,6 @@
 name: Python application
+env:
+  VARWFLVL: 'testvar'
 
 on: [push]
 
@@ -10,5 +12,10 @@ jobs:
     steps:
     - name: Check out the code
       uses: actions/checkout@v2
+    - name: print var
+      run: |
+        echo: "---"
+        echo: "${{ env.VARWFLVL }}"
+        echo: "---"
     - name: Python Syntax Checker
       uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
