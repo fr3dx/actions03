@@ -19,7 +19,3 @@ jobs:
         echo "---"
     - name: Python Syntax Checker
       uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_FAKE_API }}
